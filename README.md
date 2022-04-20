@@ -5,7 +5,7 @@ Note this is a fork of https://github.com/ethereum-boilerplate/ethereum-nextjs-b
 Educational service used to directly connect chess coaches and students in a more time and cost efficient manner through 
 pgn-based chess annotations
 
---------------------------------------------------------
+---------------------------------------------------------
 
 > React components and hooks for fast building dApps without running own backend
 
