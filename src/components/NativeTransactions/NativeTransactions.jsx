@@ -13,50 +13,50 @@ function NativeTransactions() {
     console.log(nativeTransactions)
   }, [nativeTransactions])
   const columns = [
-    {
-      title: 'From',
-      dataIndex: 'from_address',
-      key: 'from_address',
-      render: from => (
-        getEllipsisTxt(from, 5)
-      )
-    },
-    {
-      title: 'To',
-      dataIndex: 'to_address',
-      key: 'to_address',
-      render: to => (
-        getEllipsisTxt(to, 5)
-      )
-    },
-    {
-      title: 'Value',
-      dataIndex: 'value',
-      key: 'value',
-      render: value => (
-          // missing second argument in FromWei, decimals
-        parseFloat(Moralis.Units.FromWei(value).toFixed(6))
-      )
-    },
-    {
-      title: 'Hash',
-      dataIndex: 'hash',
-      key: 'hash',
-      render: hash => (
-        <a 
-          href={
-            chainId === "0x1" ? `https://etherscan.io/tx/${hash}` :
-            chainId === "0x38" ? `https://bscscan.com/tx/${hash}` :
-            chainId === "0x89" ? `https://polygonscan.com/tx/${hash}` :
-            `https://explorer.avax.network/search?query=${hash}`
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Transaction
-        </a>
-      )
-    }
+    // {
+    //   title: 'From',
+    //   dataIndex: 'from_address',
+    //   key: 'from_address',
+    //   render: from => (
+    //     getEllipsisTxt(from, 5)
+    //   )
+    // },
+    // {
+    //   title: 'To',
+    //   dataIndex: 'to_address',
+    //   key: 'to_address',
+    //   render: to => (
+    //     getEllipsisTxt(to, 5)
+    //   )
+    // },
+    // {
+    //   title: 'Value',
+    //   dataIndex: 'value',
+    //   key: 'value',
+    //   render: value => (
+    //       // missing second argument in FromWei, decimals
+    //     parseFloat(Moralis.Units.FromWei(value).toFixed(6))
+    //   )
+    // },
+    // {
+    //   title: 'Hash',
+    //   dataIndex: 'hash',
+    //   key: 'hash',
+    //   render: hash => (
+    //     <a 
+    //       href={
+    //         chainId === "0x1" ? `https://etherscan.io/tx/${hash}` :
+    //         chainId === "0x38" ? `https://bscscan.com/tx/${hash}` :
+    //         chainId === "0x89" ? `https://polygonscan.com/tx/${hash}` :
+    //         `https://explorer.avax.network/search?query=${hash}`
+    //       }
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       View Transaction
+    //     </a>
+    //   )
+    // }
   ]
 
   let key = 0;
