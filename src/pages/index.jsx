@@ -1,7 +1,7 @@
 import React from "react";
 
 function Index() {
-	return <div>Pppf!!</div>;
+	return <div>Welcome to Chess Annotate!</div>;
 }
 
 export default Index;
