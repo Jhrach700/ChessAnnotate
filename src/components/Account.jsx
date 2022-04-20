@@ -63,7 +63,7 @@ function Account() {
         >
           <Address avatar="left" size={6} copyable style={{ fontSize: "20px" }} />
           <div style={{ marginTop: "10px", padding: "0 10px" }}>
-            <a href={`${getExplorer(chainId)}/address/${account}`} target="_blank" rel="noreferrer">
+            <a href={`${getExplorer(chainId)}/address/${account}`} target="_blank" rel="noopener noreferrer">
               <SelectOutlined style={{ marginRight: "5px" }} />
               View on Explorer
             </a>

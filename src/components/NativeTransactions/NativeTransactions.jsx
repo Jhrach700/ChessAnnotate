@@ -51,7 +51,7 @@ function NativeTransactions() {
             `https://explorer.avax.network/search?query=${hash}`
           }
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           View Transaction
         </a>

@@ -220,8 +220,8 @@ export default function Profile({ isServerInfo, wallet_addr, personal= false }) 
   
           <div className="text-gray-500 font-medium ">{Moralis.User.current().attributes.ethAddress}</div>
           <div className="text-gray-500 font-medium ">Rating: {rating}</div>
-          <div className="text-gray-500 font-medium ">Lichess Profile: <a href={lichess} rel="noreferrer" target="_blank">{lichess}</a> </div>
-          <div className="text-gray-500 font-medium ">Chess.com Profile: <a href={chesscom} rel="noreferrer" target="_blank"></a></div>
+          <div className="text-gray-500 font-medium ">Lichess Profile: <a href={lichess} rel="noopener noreferrer" target="_blank">{lichess}</a> </div>
+          <div className="text-gray-500 font-medium ">Chess.com Profile: <a href={chesscom} rel="noopener noreferrer" target="_blank"></a></div>
           <div className="text-gray-500 font-medium">Joined March 2022</div>
   
           {/* <div className="text-gray-500 font-medium ">{walletAddress.slice(0, 6) + "..." + walletAddress.slice(walletAddress.length - 4, walletAddress.length)}</div>
@@ -271,8 +271,8 @@ export default function Profile({ isServerInfo, wallet_addr, personal= false }) 
 
         <div className="text-gray-500 font-medium ">{wallet_addr}</div>
         <div className="text-gray-500 font-medium ">Rating: {rating}</div>
-        <div className="text-gray-500 font-medium ">Lichess Profile: <a href={lichess} rel="noreferrer" target="_blank">{lichess}</a> </div>
-        <div className="text-gray-500 font-medium ">Chess.com Profile: <a href={chesscom} rel="noreferrer" target="_blank"></a></div>
+        <div className="text-gray-500 font-medium ">Lichess Profile: <a href={lichess} rel="noopener noreferrer" target="_blank">{lichess}</a> </div>
+        <div className="text-gray-500 font-medium ">Chess.com Profile: <a href={chesscom} rel="noopener noreferrer" target="_blank"></a></div>
         <div className="text-gray-500 font-medium">Joined March 2022</div>
 
         {/* <div className="text-gray-500 font-medium ">{walletAddress.slice(0, 6) + "..." + walletAddress.slice(walletAddress.length - 4, walletAddress.length)}</div>
