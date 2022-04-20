@@ -26,11 +26,87 @@ const styles = {
 function Account() {
   const { authenticate, isAuthenticated, logout, account, chainId } = useMoralis();
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isWalletModalVisible, setisWalletModalVisible] = useState(false);
+
+  function auth() {
+    //authenticate({ signingMessage: "Connect your wallet to start using CouponMint!" }).then(function (res) {
+    //
+    //  console.log("res:", res)
+    //})
+    var ret = authenticate({
+      signingMessage: "Connect your wallet to start using CouponMint!",
+      onError: () => goldenShow()
+    }
+    // var ret = authenticate({
+    //   signingMessage: "Connect your wallet to start using CouponMint!", onSuccess: () => alert("🎉"),
+    //   onError: () => goldenShow()
+    // }
+
+    )
+    console.log("authenticate returned:", ret)
+  }
+
+
+  function goldenShow() {
+    //alert("GOLDEN ERROR🎉")
+    setisWalletModalVisible('true')
+  }
+
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
 
   if (!isAuthenticated) {
+    //alert("HELLO")
     return (
-      <div style={styles.account} onClick={() => authenticate({ signingMessage: "Connect Wallet to start using our Chess Annotation Service!" })}>
-        <p style={styles.text}>Authenticate</p>
+      <div className="div">
+        <div
+          style={styles.account}
+          //onClick={() => authenticate({ signingMessage: "Connect your wallet to start using CouponMint!" })}
+          onClick={auth}
+        >
+          <p style={styles.text}>Authenticate</p>
+        </div>
+
+        <Modal
+          visible={isWalletModalVisible}
+          footer={null}
+          onCancel={() => setisWalletModalVisible(false)}
+          bodyStyle={{
+            padding: "15px",
+            fontSize: "17px",
+            fontWeight: "500",
+          }}
+          style={{ fontSize: "16px", fontWeight: "500" }}
+          width="400px"
+        >
+          Connect Wallet
+          <Button
+            size="large"
+            type="primary"
+            style={{
+              
+              width: "100%",
+              marginTop: "35px",
+              borderRadius: "0.5rem",
+              fontSize: "16px",
+              fontWeight: "500",
+            }}
+            onClick={() => {
+              //logout();
+              openInNewTab('https://metamask.io/download/')
+              //setisWalletModalVisible(false);
+            }}
+          >
+            MetaMask
+          </Button>
+          
+
+        </Modal>
+
+
+
       </div>
     );
   }
