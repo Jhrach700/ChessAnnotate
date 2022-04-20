@@ -40,7 +40,7 @@ function ERC20Transfers() {
       dataIndex: "transaction_hash",
       key: "transaction_hash",
       render: (hash) => (
-        <a href={`${getExplorer(chainId)}tx/${hash}`} target="_blank" rel="noreferrer">
+        <a href={`${getExplorer(chainId)}tx/${hash}`} target="_blank" rel="noopener noreferrer">
           View Transaction
         </a>
       ),

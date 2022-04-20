@@ -16,7 +16,7 @@ function ERC20Balance(props) {
 			title: "",
 			dataIndex: "logo",
 			key: "logo",
-			render: (logo) => (
+			render: logo => (
 				<img
 					src={
 						logo ||
