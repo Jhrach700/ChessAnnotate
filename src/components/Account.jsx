@@ -101,6 +101,46 @@ function Account() {
           >
             MetaMask
           </Button>
+
+          <Button
+            size="large"
+            type="primary"
+            style={{
+              
+              width: "100%",
+              marginTop: "12px",
+              borderRadius: "0.5rem",
+              fontSize: "16px",
+              fontWeight: "500",
+            }}
+            onClick={() => {
+              //logout();
+              openInNewTab('https://www.coinbase.com/wallet')
+              //setisWalletModalVisible(false);
+            }}
+          >
+            Coinbase
+          </Button>
+
+          <Button
+            size="large"
+            type="primary"
+            style={{
+              
+              width: "100%",
+              marginTop: "12px",
+              borderRadius: "0.5rem",
+              fontSize: "16px",
+              fontWeight: "500",
+            }}
+            onClick={() => {
+              //logout();
+              openInNewTab('https://walletconnect.com/')
+              //setisWalletModalVisible(false);
+            }}
+          >
+            WalletConnect
+          </Button>
           
 
         </Modal>
