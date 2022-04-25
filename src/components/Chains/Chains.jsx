@@ -21,16 +21,16 @@ const styles = {
 };
 
 const menuItems = [
-	{
-		key: "0x1",
-		value: "Ethereum",
-		icon: <ETHLogo />,
-	},
-	{
-		key: "0x539",
-		value: "Local Chain",
-		icon: <ETHLogo />,
-	},
+	// {
+	// 	key: "0x1",
+	// 	value: "Ethereum",
+	// 	icon: <ETHLogo />,
+	// },
+	// {
+	// 	key: "0x539",
+	// 	value: "Local Chain",
+	// 	icon: <ETHLogo />,
+	// },
 	{
 		key: "0x3",
 		value: "Ropsten Testnet",
@@ -51,31 +51,31 @@ const menuItems = [
 		value: "Goerli Testnet",
 		icon: <ETHLogo />,
 	},
-	{
-		key: "0x38",
-		value: "Binance",
-		icon: <BSCLogo />,
-	},
-	{
-		key: "0x61",
-		value: "Smart Chain Testnet",
-		icon: <BSCLogo />,
-	},
-	{
-		key: "0x89",
-		value: "Polygon",
-		icon: <PolygonLogo />,
-	},
-	{
-		key: "0x13881",
-		value: "Mumbai",
-		icon: <PolygonLogo />,
-	},
-	{
-		key: "0xa86a",
-		value: "Avalanche",
-		icon: <AvaxLogo />,
-	},
+	// {
+	// 	key: "0x38",
+	// 	value: "Binance",
+	// 	icon: <BSCLogo />,
+	// },
+	// {
+	// 	key: "0x61",
+	// 	value: "Smart Chain Testnet",
+	// 	icon: <BSCLogo />,
+	// },
+	// {
+	// 	key: "0x89",
+	// 	value: "Polygon",
+	// 	icon: <PolygonLogo />,
+	// },
+	// {
+	// 	key: "0x13881",
+	// 	value: "Mumbai",
+	// 	icon: <PolygonLogo />,
+	// },
+	// {
+	// 	key: "0xa86a",
+	// 	value: "Avalanche",
+	// 	icon: <AvaxLogo />,
+	// },
 ];
 
 function Chains() {
