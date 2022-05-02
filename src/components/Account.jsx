@@ -29,18 +29,12 @@ function Account() {
   const [isWalletModalVisible, setisWalletModalVisible] = useState(false);
 
   function auth() {
-    //authenticate({ signingMessage: "Connect your wallet to start using CouponMint!" }).then(function (res) {
-    //
-    //  console.log("res:", res)
-    //})
+
     var ret = authenticate({
-      signingMessage: "Connect your wallet to start using CouponMint!",
+      signingMessage: "Connect your wallet to start using our Educational Chess Annotation Service!",
       onError: () => goldenShow()
     }
-    // var ret = authenticate({
-    //   signingMessage: "Connect your wallet to start using CouponMint!", onSuccess: () => alert("🎉"),
-    //   onError: () => goldenShow()
-    // }
+
 
     )
     console.log("authenticate returned:", ret)
@@ -63,7 +57,6 @@ function Account() {
       <div className="div">
         <div
           style={styles.account}
-          //onClick={() => authenticate({ signingMessage: "Connect your wallet to start using CouponMint!" })}
           onClick={auth}
         >
           <p style={styles.text}>Authenticate</p>
